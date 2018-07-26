@@ -1,0 +1,47 @@
+%panel {
+    .panel {
+        border:0!important;
+        overflow: hidden;
+        .panel-header {
+            font-size:13px;
+        }
+
+        .panel-content {
+            background-color: #fff!important;
+            margin:0!important;
+            padding:0!important;
+            .listings {
+                border:0!important;
+                border-bottom:1px #eee solid!important;
+                overflow:hidden;
+                cursor: pointer;
+                .text {
+                    color:#000;
+                }
+
+                .topla {
+
+                    &:hover {
+                        margin-left:4px;
+                        transition: 200ms;
+                    }
+                }
+
+                img {
+                    width:16px;
+                    height: 16px;
+                }
+
+            }
+        }
+
+        .panel-footer {
+            background-color:#fff;
+            .loadMoreBtn {
+                margin-left: calc(100% - 50%);
+                cursor: pointer;
+                display: block;
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
-
+@import 'templates';
+$featuredItemsWidth: 120%;
 body {
     background-color:#efefef!important;
-}
+ }
 
 .right-floated {
     float: right;
@@ -83,7 +84,7 @@ body {
 
 
 .featured-items {
-    width: 100%;
+    width: $featuredItemsWidth;
 
     .featured-header-text {
         font-weight: bold;
@@ -160,51 +161,7 @@ body {
         }
     }
 
-    .panel {
-        border:0!important;
-        overflow: hidden;
-        .panel-header {
-            font-size:13px;
-        }
-
-        .panel-content {
-            background-color: #fff!important;
-            margin:0!important;
-            padding:0!important;
-            .listings {
-                border:0!important;
-                border-bottom:1px #eee solid!important;
-                overflow:hidden;
-                cursor: pointer;
-                .text {
-                    color:#000;
-                }
-
-                .topla {
-
-                    &:hover {
-                        margin-left:4px;
-                        transition: 200ms;
-                    }
-                }
-
-                img {
-                    width:16px;
-                    height: 16px;
-                }
-
-            }
-        }
-
-        .panel-footer {
-            background-color:#fff;
-            .loadMoreBtn {
-                margin-left: calc(100% - 50%);
-                cursor: pointer;
-                display: block;
-            }
-        }
-    }
+    @extend %panel;
 }
 
 
@@ -221,7 +178,7 @@ body {
 }
 .content-section {
     background-color:#f7f7f7!important;
-    width: 100%;
+    width: 80%;
     height: 100%;
     // display: inline-block;
 }
@@ -246,4 +203,23 @@ body {
 .inner {
     overflow-y: scroll;
 
+}
+
+/* Sidebar */
+
+
+.sidebar-menu {
+    border-bottom:inherit!important;
+    .active {
+        border-bottom: 2px solid #44bc75!important;
+    }
+    .sidebar-menu-content {
+        .panel {
+            @extend %panel ;
+        }
+        .panel-header {
+            border-bottom: 2px solid #44bc75;
+        }
+
+    }
 }
