@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choban web template</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" />
+</head>
+
+<body class="main">
+    <div class="window-title column">
+        <a href="#" class="removelink"> qwe </a>
+    </div>
+    <div class="ui menu header-navbar">
+        <div class="ui two column container fluid">
+
+            <div class="buttons column">
+                <div class="backBtn bttns">
+                    <i class="angle left icon"></i>
+                </div>
+
+                <div class="forwardBtn bttns">
+                    <i class="angle right icon"></i>
+                </div>
+
+                <div class="homeBtn bttns">
+                    <i class="redo icon"></i>
+                </div>
+
+                <div class="reloadBtn bttns">
+                    <i class="home icon"></i>
+                </div>
+            </div>
+
+
+            <div class="searchField column">
+                <form class="ui form">
+                    <div class="field">
+                        <input name="first-name" placeholder="Search what you want" type="text">
+                    </div>
+                </form>
+            </div>
+
+            <div class="buttons column">
+                <div class="bttns menu">
+                    <a class="ui button loginBtn">
+                        <i class="user circle icon"></i>
+                        <span>qwe</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ui container two column fluid left">
+        <div class="ui section column twentyfivepx">
+            <h2>RSS</h2>
+
+            <div class="ui secondary pointing menu column sidebar-menu">
+                <a class="item active" data-tab="first">
+                    Home
+                </a>
+                <a class="item"  data-tab="second">
+                    Messages
+                </a>
+            </div>
+            <!-- Sidebar -->
+            <div class="ui fixed sidebar-menu-content tab active" data-tab="first">
+                <div class="inner-section">
+                    <div class="ui segments panel">
+                        <div class="ui segment panel-header">
+                            <p class="bold">Recent Episodes</p>
+                        </div>
+                        <div class="ui secondary segment panel-content">
+                            <div class="ui attached segment listings">
+                                <div class="topla">
+                                    <img class="ui avatar image remove-circle" src="https://d12xoj7p9moygp.cloudfront.net/favicon/favicon-128.png" alt="">
+                                    <span class="text">This segment is attached on both sides</span>
+                                    <span class="right-floated day">5 day ago</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ui panel-footer column">
+                            <a class="removelink loadMoreBtn">
+                                <i class="angle down icon light" style="font-size:20px;margin:0 auto"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui sa tab segment " data-tab="second">
+                <p>qwe</p>
+            </div>
+            <!-- #Sidebar-->
+
+
+        </div>
+
+        <div class="clearfix"></div>
+        <!-- Content -->
+
+        <div class="ui column content">
+            <div class="header">
+                <h1 class="bold"> 5 steps to speed up your image heavy website </h1>
+                <div class="author">
+                    <i class="icon bookmark outline"></i>
+                    <i class="icon twitter"></i>
+                    <i class="icon external alternate"></i>
+                    <a href="#" class="author-name"> CODEBURST </a>
+                    <span class="bold time"> Posted 17 hours ago</span>
+                </div>
+            </div>
+
+
+            <div class="ui column post-content">
+                <div class="contentt">
+                        <p>Animations with Reanimated can be more difficult to deal with than normal Animated. However when complex animations cause performance issues having a full understanding of Reanimated will empower you to create animations without issue.</p>
+
+                        <p>In normal <code>Animated</code> fashion you would call <code>Animated.timing()</code> and pass in an <code>Animated.Value</code>. You would supply it with a configuration including the <code>easing</code>, <code>toValue</code>, and <code>duration</code>. Based upon the difference between the current value, the <code>toValue</code> supplied and how long the animation should take the <code>Animated</code> library will calculate each step to transition.</p>
+                        
+                        <p>A similar concept applies to Reanimated but it will leverage a <code>Clock</code>, it will tick every frame and based upon the configuration you&#39;ve provided will advanced the <code>position</code>. Rather than calling&nbsp;<code>.start</code> or&nbsp;<code>.stop</code> you call <code>startClock</code> and <code>stopClock</code>.</p>
+                        
+                        <p>In <code>Animated</code> the <code>start()</code> would take a callback and when it was completed it would be called with a <code>finished</code> boolean. In Reanimated there is a <code>finished</code> value that will be set to <code>1</code>. Additionally to check if an animation is running you use <code>clockRunning</code>.</p>
+                        
+                        <p>These will all be more clear as soon as we dive into code.</p>
+                        
+                        <p><img src="https://cdn-images-1.medium.com/max/1600/0*ooOgPfYdom1nsnz8.gif" /></p>
+                        
+                        <p>The first step is our box. This is basically going to turn into a button but we have to have something to touch. We utilize <code>Animated.View</code> from Reanimated so it can handle the animated value that we are going to pass to it later.</p>
+                        
+                        <p>Here we just set up our styling.</p>
+                        
+                        <p><img src="https://cdn-images-1.medium.com/max/1600/0*eD4JgwGrPk_xQ9M6.png" /></p>
+                        
+                        <p>Next we are going to setup our <code>gestureState</code> value. This is going to hold onto the state of our <code>TapGestureHandler</code>. We need to use <code>Value</code> from Reanimated to hold -1 which is going to be a non-existent state of the gesture handler.</p>
+                        
+                        <p>We then use <code>event</code> from Reanimated to setup a traversal of a value that would be called back to the <code>onHandlerStateChange</code> function. The syntax is an array, which we have placed an object in the first position of the array which corresponds with the first argument the callback would be called with. Then the object tells Reanimated to look at <code>nativeEvent</code> then <code>state</code> on the <code>nativeEvent</code> and whatever is at <code>state</code> assign that to our <code>Value</code> called <code>gestureState</code>.</p>
+                        
+                        <p>This syntax here is class property syntax. The value of <code>gestureState</code> will be on the class instance. So in order to reference it we need to do <code>this.gestureState</code>.</p>
+                        
+                        <p>Now we pass our <code>this.onStateChange</code> event handler from Reanimated into the <code>onHandlerStateChange</code> callback of the <code>TapGestureHandler</code>.</p>
+                        
+                        <p>Now onto the clocks. We need to create a new instance of a Clock. This is going to be an instance that can be started and stopped. When started it will tick on the native side and handle the configurations that you&rsquo;ve passed it. This is essentially the <code>requestAnimationFrame</code> but in Reanimated.</p>
+                        
+                        <p>Now the other thing is we&rsquo;re going to need to setup a function. We&rsquo;ll call it <code>runOpacityTimer</code> and we&#39;ll pass it our <code>clock</code> as well as our <code>gestureState</code>. The clock is so we can control timing opacity animation and then also the <code>gestureState</code> so we can observe it and trigger the animation when the button is clicked.</p>
+                        
+                        <p>The return of <code>runOpacityTimer</code> will eventually be the value pass to our button.</p>
+                        
+                        <p>Running a timing animation we&rsquo;ll need to define an Easing. So we&rsquo;ll first destructure Easing off of Reanimated.</p>
+                        
+                        <p>Now lets take a look at the config for the Clock and what will be passed into our <code>timing</code> call.</p>
+                        
+                        <p>The first is <code>state</code> this is the state of our clock. It has 4 values. The <code>finished</code> will either be a <code>0</code> or <code>1</code>. 0 meaning hasn&#39;t finished and 1 meaning the clock has completed. The <code>time</code> and <code>frameTime</code> are used to determine how much progress is needed to be made on the animation.</p>
+                        
+                        <p>The <code>timing</code> animation is done using the other building blocks provided by Reanimated. You can check it out the <a href="https://github.com/kmagiera/react-native-reanimated/blob/master/src/animations/timing.js">timing code here</a></p>
+                        
+                        <p>For our config that will be passed to our timing we setup our duration of <code>300</code>, we set our <code>toValue</code> to <code>-1</code> which will be explained why later. Then finally we setup our easing for how we want our animation to be processed.</p>
+                        
+                        <p>We&rsquo;ll now setup a bunch of conditions and our animation so we need to grab all of these things off of Reanimated.</p>
+                        
+                        <p>We&rsquo;ve already seen our config and state. But now we need to setup our <code>timing</code>. When we want to combine a bunch of animations, conditionals, and like wise we use <code>block</code>. This will create a block of actions that are required for the animation.</p>
+                        
+                        <p>In our case we creating a <code>timing</code> animation. We pass in our <code>clock</code> that the timing animation will work off of. Our <code>state</code> of animated values, and finally our config. We then use our <code>cond</code> which will execute when a condition is met. In our case when <code>state.finished</code> that is controlled by the clock is true then we&#39;ll stop our clock.</p>
+                        
+                        <p>Now we need to bring in <code>State</code> from gesture handler so we can compare our <code>gestureState</code> to what is happening to our <code>TapGestureHandler</code>. Additionally we&#39;ll bring a bunch of other necessary reanimated functions.</p>
+                        
+                        <p>Lets look at our <code>block</code> and break it down. There are two phases of the opacity animation. When you press we&#39;ll animate the opacity out. Then as soon as you release it will animate the button to full opacity. This may or may not be once the timing animation has completely finished.</p>
+                        
+                        <p>So our comparison here starts out with a <code>cond</code> which just means when a condition is met do something. In our case we want to look at 2 things so we use <code>and</code>. When our <code>gestureState</code> (the state of the user tapping) has <code>BEGAN</code> and also is <code>neq</code>(not equal) to 1. Then we do some <code>set</code> calls to reset our animation if it were already running. This resets it to a fresh state. Notice we didn&#39;t reset our position though. This will ensure the appropriate progress is made from the existing opacity of the button. If we reset this to either 1 or 0 the opacity would completely reset to either being visible or not visible and we want it to reverse from the current location that the user let up at.</p>
+                        
+                        <p>We set our <code>toValue</code> to <code>1</code>. Remember it started at -1. Then run our <code>startClock</code> to kick off our <code>timing</code> animation.</p>
+                        
+                        <p>Next up we do the same thing but for when the tap gesture has entered the <code>END</code> phase, aka when the user lifts their finger. Again we do a <code>neq</code> to compare to the <code>toValue</code>.</p>
+                        
+                        <p>The reason the <code>neq(config.toValue, 0)</code> or the comparison to the <code>toValue</code> is necessary is because of how Reanimated works. It will look at all the nodes and subnodes for any changes to determine if the any segment of the our declaration needs to be run.</p>
+                        
+                        <p>So the <code>gestureState</code> and additionally our <code>clock</code> are nodes that are constantly changing. So what that means if we didn&#39;t add in our <code>neq</code> then the <code>set</code> calls would always be called and our animation would never trigger.</p>
+                        
+                        <p>When dealing with clocks you must be very explicit about the conditions that you want otherwise you may have unintended consequences.</p>
+                        
+                        <p>So finally put all together it would look like this.</p>
+                        
+                        <p>So finally the last thing we need to do is reverse our <code>position</code> with <code>interpolate</code>. What happens is our <code>position</code> on our <code>clock</code> will transition from <code>0</code> to <code>1</code>. If we want our button to appear in the beginning and be visible that means our final return value must be <code>1</code>.</p>
+                        
+                        <p>So with our <code>interpolate</code> we look at <code>state.position</code> which starts at <code>0</code> and then flip it around with our <code>outputRange</code>. So the opacity will be <code>1</code> when <code>position</code> is <code>0</code>. Extrapolate isn&#39;t totally necessary here but it will clamp our output to only be between <code>0</code> and <code>1</code>. Never higher or lower.</p>
+                        
+                        <p>Finally look at the position at which we have our <code>interpolate</code> placed. Our <code>this.opacity</code> is getting assigned this return value. The final value that our <code>Animated.View</code> and subsequently the <code>opacity</code> value is going to be whatever is placed at the end. So in our case we need to put the <code>interpolate</code> at the end. The rest will all just be executed, and the final <code>interpolate</code> will be our opacity value.</p>
+                        
+                        <p>Here we place our <code>this.opacity</code> on a style object for <code>opacity</code>.</p>
+                        
+                        <p>We&rsquo;re complete. We&rsquo;ve create a button that when tapped and held will animate all the way to <code>0</code> opacity and when released will animate back to <code>1</code> opacity. This may seem complicated for a opacity fade in fade out but the power of reanimated comes with complex animations that are intensive on the bridge. I</p>
+                        
+                        <p>Check out the <a href="https://snack.expo.io/@codedaily/reanimatedtimingopacity">live demo here</a></p>
+                        
+                        <p><img src="https://cdn-images-1.medium.com/max/1600/0*-XMXZr1ElbZUCQNo.gif" /></p>
+                        
+                        <p><em>Originally published at </em><a href="https://codedaily.io/tutorials/54/Create-a-Tap-and-Hold-Toggle-Opacity-Animated-Box-with-Reanimated-in-React-Native"><em>Code Daily</em></a><em>.</em></p>
+                        
+                        <p>I publish articles and screencasts weekly on React, React Native, and everything else related to web development on <a href="https://codedaily.io/"><strong>Code Daily</strong></a>. Be sure and follow me on <a href="https://twitter.com/browniefed"><strong>Twitter</strong></a>.</p>
+                        
+                        <p>Join our <a href="https://codedaily.io/newsletter"><strong>Newsletter</strong></a> to get the latest and greatest content to make you a better developer.</p>
+                        
+                        <p>&nbsp;</p>
+                        
+                </div>
+            </div>
+        </div>
+        <!-- #Content -->
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+
+        <script>
+            $('.sidebar-menu .item').tab();
+        </script>
+    <script async src="js/main.js"></script>
+
+</body>
+
+</html>

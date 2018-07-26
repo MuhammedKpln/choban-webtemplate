@@ -5,6 +5,11 @@ body {
     background-color:#f7f7f7!important;
  }
 
+ .main {
+     height: 90%;
+     overflow: hidden;
+ }
+
 .right-floated {
     float: right;
 }
@@ -162,7 +167,7 @@ body {
         }
     }
 
-    @extend %panel;
+    @include panel;
 }
 
 
@@ -223,7 +228,7 @@ body {
     }
     .sidebar-menu-content {
         .panel {
-            @extend %panel ;
+            @include panel ;
         }
         .panel-header {
             border-bottom: 2px solid #44bc75;
@@ -240,6 +245,7 @@ body {
     .header {
         width: auto;
         display: inline-block;
+        line-height: 1.15!important;
         .section-image {
             display: inline-block;
             img {
@@ -259,8 +265,35 @@ body {
         .unfollow {
             float:right;
         }
+
+        .author {
+            text-transform: uppercase;
+            margin-left:9px;
+            display:inline-block;
+            font-size:9px;
+
+            a {
+                color:#44bc75!important;
+            }
+
+            .time {
+                margin-left:10px;
+                color:rgb(170, 170, 170);
+            }
+        }
     }
 
-    @extend %posts
+    .post-content {
+        margin-top: 20px;
+        margin: 0 auto;
+        height: 1000px;
+        overflow: auto;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @include posts
 
 }

@@ -1,4 +1,4 @@
-%panel {
+@mixin panel {
     .panel {
         border:0!important;
         overflow: hidden;
@@ -47,13 +47,14 @@
 }
 
 
-%posts {
+@mixin posts {
     .posts {
         width: 63%;
         overflow: scroll;
         margin-top:30px;
         .post {
             margin-bottom:20px;
+
             .header-section {
                 width:58%;
                 .image {
@@ -88,6 +89,10 @@
                     margin-left:9px;
                     display:inline-block;
                     font-size:9px;
+
+                    a {
+                        color:#44bc75!important;
+                    }
 
                     .time {
                         margin-left:10px;
