@@ -10,15 +10,14 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "bulma": "0.7.1",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
         "laravel-mix": "^2.0",
-        "lodash": "^4.17.4"
+        "lodash": "^4.17.4",
+        "gulp": "^3.9.1"
     },
     "dependencies": {
+        "jquery": "^3.2",
         "date-fns": "^1.29.0",
-        "gulp": "^3.9.1",
         "octicons": "^8.0.0",
         "sweetalert2": "^7.25.6"
     }
